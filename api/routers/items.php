@@ -143,19 +143,23 @@ function getItems($options) {
     $data->bindValue(':' . $key, $value, PDO::PARAM_INT);
   }
   $data->execute();
-
+  
+  
+  $getAllItems = [];
+  foreach($data->fetchAll() as $keys => $item) {
+    $getAllItems[] = array(
+      'id' => (int)$item['id'],
+      'firstName' => $item['first_name'],
+      'lastName' => $item['last_name'],
+      'phone' => $item['phone'],
+      'email' => $item['email'],
+      'image' => $item['image']
+    );
+  }
+  
   return array(
     'meta' => $meta,
-    'records' => __::map($data->fetchAll(), function($item) {
-      return array(
-        'id' => (int)$item['id'],
-        'firstName' => $item['first_name'],
-        'lastName' => $item['last_name'],
-        'phone' => $item['phone'],
-        'email' => $item['email'],
-        'image' => $item['image']
-      );
-    })
+    'records' => $getAllItems
   );
 }
 
