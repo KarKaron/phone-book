@@ -159,6 +159,7 @@ $(function() {
       $('#phone').val(data.phone);
       $('#email').val(data.email);
       $('#imagePrev').attr('src', '/images/items/'+data.image);
+      $('#imageNew').val(data.image);
       $('#imageName').text('Выберите файл');
     });
   });
