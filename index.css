@@ -1,0 +1,80 @@
+@charset "utf-8";
+@import url('css/bootstrap.min.css');
+@import url('css/mdb.min.css');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pointer {
+  cursor: pointer; 
+}
+
+body {
+  padding-top: 4rem;
+  background: #F0EDEE;
+  font: 0.9rem 'Roboto Condensed', sans-serif;
+}
+
+.header, .navbar, .footer, .main {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #421D02;
+}
+
+.chip {
+  margin: 0!important;
+}
+
+.sAlert, .eAlert {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 1000;
+}
+
+.error_alert {
+  margin: 20px auto;
+  width: 300px;
+  background: #fff;
+  border-radius: 5px;  	
+  color: #000;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ff3300;
+}
+
+.error_alert ul {
+  margin-top: 10px;	
+}
+
+.error_alert ul li {
+  color: #990000;
+  margin-left: 10px;
+  text-align: left;
+}
+
+#edit_submit {
+  position: fixed;
+  top: 150px;
+  right: 4%;
+  z-index: 1000;
+}
