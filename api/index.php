@@ -2,7 +2,6 @@
 if (session_id() == '') {
   session_start();
 }
-include_once 'underscore.php';
 include_once 'config.php';
 include_once 'auth.php';
 
